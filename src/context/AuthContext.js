@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useState, useEffect } from 'react'
 import jwt_decode from 'jwt-decode'
 import { useNavigate } from 'react-router-dom'
@@ -88,7 +89,7 @@ export const AuthProvider = ({ children }) => {
     let contextData = {
         // variables
         user: user,
-
+        authTokens: authTokens,
         // functions
         loginUser: loginUser,
         logoutUser: logoutUser
